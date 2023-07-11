@@ -49,7 +49,7 @@ pred_invertebrates$predictions
 \## prediction is in log10(mg/L) --> make it mg/L
 10^pred_invertebrates$predictions
 
-# Algorithmic approach for multicollinearity correction
+## Algorithmic approach for multicollinearity correction
 
 Here, we provide an R version of an approach to correct datasets for multicollinearity that was recently presented in a [blog post](https://towardsdatascience.com/are-you-dropping-too-many-correlated-features-d1c96654abe6) by Brian Pietracatella. This approach is deemed to prevent the drop of too many variables and thus loose an unnecessarily large amount of information, while still eliminating multicollinearity. For more information, see our associated publication.
 
