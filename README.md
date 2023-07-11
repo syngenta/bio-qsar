@@ -16,6 +16,7 @@ library(ranger)
 \# fish model
 
 \## load the fish model
+
 model_fish <-readRDS("model_fish.RDS")
 
 \## show features required for predictions
