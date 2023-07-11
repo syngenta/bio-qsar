@@ -1,10 +1,10 @@
 # Bio-QSAR
 
-This repository includes the models and code from the publiciation: *Physiological variables in machine learning QSARs allow for both cross-chemical and cross-species predictions*
+This repository includes the data and models from the publication: *Physiological variables in machine learning QSARs allow for both cross-chemical and cross-species predictions*
 
 ## Freshwater fish and invertebrate models
 
-These Bio-QSAR models allow the prediction of pesticide toxicity in freshwater fish and invertebrates. For information on development, use, and limitations, please see our associated publication.
+These Bio-QSAR models allow the prediction of toxicity in freshwater fish and invertebrates. For information on development, use, and limitations, please see our associated publication.
 
 Models were built using R version 4.1.3 and the packages tidyverse (version 1.3.1), caret (version 6.0.91), and ranger (version 0.13.1).
 
