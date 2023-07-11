@@ -9,6 +9,7 @@ These Bio-QSAR models allow the prediction of toxicity in freshwater fish and in
 Models were built using R version 4.1.3 and the packages tidyverse (version 1.3.1), caret (version 6.0.91), and ranger (version 0.13.1).
 
 \# load libraries
+
 library(tidyverse)
 library(caret)
 library(ranger)
@@ -20,34 +21,44 @@ library(ranger)
 model_fish <-readRDS("model_fish.RDS")
 
 \## show features required for predictions
+
 model_fish$xNames
 
 \## load fish example
+
 example_data_fish <- read_csv("example_data_fish.csv")
 
 \## make a prediction
+
 pred_fish <- model_fish %>% predict(example_data_fish)
 pred_fish$predictions
 
 \## prediction is in log10(mg/L) --> make it mg/L
+
 10^pred_fish$predictions
 
 \# invertebrate model
 
 \## load the invertebrate model
+
 model_invertebrates <-readRDS("model_invertebrates.RDS")
 
 \## show features required for predictions
+
 model_invertebrates$xNames
 
 \## load invertebrate example
+
 example_data_invertebrates <- read_csv("example_data_invertebrates.csv")
 
 \## make a prediction
+
 pred_invertebrates <- model_invertebrates %>% predict(example_data_invertebrates)
+
 pred_invertebrates$predictions
 
 \## prediction is in log10(mg/L) --> make it mg/L
+
 10^pred_invertebrates$predictions
 
 ## Algorithmic approach for multicollinearity correction
@@ -57,16 +68,20 @@ Here, we provide an R version of an approach to correct datasets for multicollin
 The function was built using R version 4.1.3 and the packages tidyverse (version 1.3.1) and caret (version 6.0.91).
 
 \# load libraries
+
 library(tidyverse)
 library(caret)
 
 \# source the function
+
 source("multicoll_sol.R")
 
 \# load some example data
+
 data("BloodBrain")
 
 \# run the function with a correlation cut-off of 0.7
+
 result <- multicoll_sol(bbbDescr, 0.7)
 result
 
