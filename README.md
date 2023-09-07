@@ -1,6 +1,6 @@
 # Bio-QSAR
 
-This repository includes data, code, and models from the publication: *Physiological variables in machine learning QSARs allow for both cross-chemical and cross-species predictions*
+This repository includes data, code, and models from the publication: [Physiological variables in machine learning QSARs allow for both cross-chemical and cross-species predictions](https://www.sciencedirect.com/science/article/pii/S0147651323007546)
 
 ## Freshwater fish and invertebrate models
 
