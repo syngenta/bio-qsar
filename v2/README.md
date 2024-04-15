@@ -1,4 +1,4 @@
-# Bio-QSAR 2.0
+# Bio-QSARs 2.0
 
 This repository includes data, code, and models from the publication: [Bio-QSARs 2.0: Unlocking a new level of predictive power for machine learning-based ecotoxicity predictions by exploiting chemical and biological information](https://www.sciencedirect.com/science/article/pii/S0160412024001934)
 
