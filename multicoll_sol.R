@@ -4,7 +4,7 @@
 
 multicoll_sol <- function(data, cut) {
   
-  corr_mtx <- abs(cor(data))
+  corr_mtx <- abs(cor(data, use = "pairwise.complete.obs"))
   
   caret_drop1 <- findCorrelation(corr_mtx, cutoff = cut)
   caret_drop_names1 <- names(data)[caret_drop1]
@@ -53,7 +53,7 @@ multicoll_sol <- function(data, cut) {
   drop <- sort(c(drop, more_drop))
   
   data2 <- data %>% select(-all_of(drop))
-  corr_mtx2 <- abs(cor(data2))
+  corr_mtx2 <- abs(cor(data2, use = "pairwise.complete.obs"))
   
   caret_drop2 <- findCorrelation(corr_mtx2, cutoff = cut)
   caret_drop_names2 <- names(data2)[caret_drop2]
